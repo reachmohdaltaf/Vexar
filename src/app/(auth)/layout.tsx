@@ -2,7 +2,7 @@ import React from 'react'
 
 const AuthLayout = ({children}: {children: React.ReactNode}) => {
   return (
-    <div>{children}</div>
+    <div className='md:px-2 px-1'>{children}</div>
   )
 }
 

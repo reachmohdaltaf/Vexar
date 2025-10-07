@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Place allowedDevOrigins at root level, NOT in experimental
+  allowedDevOrigins: ['*.localhost:3000', 'localhost:3000'],
+  
+  experimental: {
+    // Remove allowedDevOrigins from here
+    serverActions: {
+      allowedOrigins: ['*.localhost:3000', 'localhost:3000'],
+    },
+  },
+}
 
-export default nextConfig;
+export default nextConfig
